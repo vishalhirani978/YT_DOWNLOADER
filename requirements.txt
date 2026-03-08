@@ -1,3 +1,4 @@
 streamlit
 
-pytubefix==1.17.6
+pytubefix>=1.17.6
+
