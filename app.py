@@ -11,7 +11,7 @@ if st.button("Download"):
     if url:
         try:
             
-            yt = YouTube(url, client='WEB')
+            yt = YouTube(url, client='WEB_CREATOR')
             st.write(f"Processing: **{yt.title}**")
             
             if option == "Video":
@@ -39,3 +39,4 @@ if st.button("Download"):
     else:
 
         st.warning("Please enter a URL first!")
+
