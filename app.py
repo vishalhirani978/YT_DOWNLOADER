@@ -30,11 +30,12 @@ if st.button("Download"):
                     file_name=os.path.basename(file_path),
                     mime="video/mp4" if option == "Video" else "audio/mpeg"
                 )
-            st.success("✅ Download Ready!")
+            st.success("Download Ready!")
             
             
             
         except Exception as e:
             st.error(f"Error: {e}")
     else:
+
         st.warning("Please enter a URL first!")
