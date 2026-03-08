@@ -1,7 +1,7 @@
 import streamlit as st
 from pytubefix import YouTube
 
-st.title(" YT Downloader")
+st.title("🔴 YT Downloader")
 
 url = st.text_input("Enter YouTube URL:")
 option = st.radio("Select format:", ["Video", "Audio"])
@@ -9,7 +9,7 @@ option = st.radio("Select format:", ["Video", "Audio"])
 if st.button("Download"):
     if url:
         try:
-            
+            # client='WEB_CREATOR' YouTube blocking ko bypass karne mein madad karta hai
             yt = YouTube(url, client='WEB_CREATOR')
             st.write(f"Processing: **{yt.title}**")
             
@@ -22,11 +22,11 @@ if st.button("Download"):
             
             with open(file_path, "rb") as f:
                 st.download_button(
-                    label=" Download Now",
+                    label="📥 Download Now",
                     data=f,
-                    file_name="downloaded_file.mp4" if option == "Video" else "audio.mp3",
+                    file_name="media_file.mp4" if option == "Video" else "audio.mp3",
                     mime="video/mp4" if option == "Video" else "audio/mpeg"
                 )
-            st.success(" Download Ready!")
+            st.success("✅ Download Ready!")
         except Exception as e:
             st.error(f"Error: {e}")
