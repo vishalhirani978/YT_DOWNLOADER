@@ -2,7 +2,7 @@
 
 A modern, lightweight YouTube downloader built with Python and CustomTkinter.
 
-![YouTube Downloader Preview](preview.png)
+!YouTube Downloader Preview
 
 ## Features
 
